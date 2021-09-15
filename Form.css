@@ -1,0 +1,299 @@
+/*! Start Defaul Style */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	user-select: none;
+}
+
+svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+path {
+	fill: white;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 1.2em;
+	margin-bottom: 12px;
+	cursor: default;
+}
+
+span.description {
+	font-size: 1rem;
+	margin-top: 3px;
+	margin-bottom: 15px;
+}
+
+/*! End Defaul Style */
+
+/*! Start main Style*/
+body {
+	display: flex;
+	justify-content: center;
+	margin: 0 15px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 1060px;
+}
+
+header {
+	position: fixed;
+	left: 32px;
+	right: 32px;
+	top: 32px;
+	display: flex;
+	justify-content: center;
+	transition: 500ms;
+	opacity: 0;
+	transform: translateY(-100px);
+	cursor: pointer;
+	z-index: 10;
+}
+
+header .message {
+	box-shadow: rgb(0 0 0 / 25%) 0px 0px 10px 0px;
+	color: white;
+	background-color: rgba(255, 0, 0, 0.7);
+	cursor: pointer;
+	border-radius: 0.5rem;
+	border: 1px solid red;
+	padding: 0.7rem;
+}
+
+header.alert {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+section {
+	margin: 100px 0 400px 0;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	transition: 800ms;
+	opacity: 1;
+}
+
+article span {
+	opacity: 1;
+	transition: 500ms;
+	transform: translateY(0px);
+}
+
+article.disable {
+	opacity: 0.2;
+}
+
+article span.disable {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+
+.important::after {
+	content: "*";
+	position: relative;
+	top: 0.18em;
+	left: 0;
+	color: red;
+	font-size: 1.4em;
+	line-height: 0.5em;
+}
+
+button {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	font-size: 1em;
+	line-height: 1.5em;
+	border: 1px solid black;
+	padding: 0.6075em 0.5em;
+	border-radius: 0.5rem;
+	color: white;
+	margin-top: 5px;
+	transition: 500ms;
+}
+button:hover,
+textarea:hover {
+	transition: 300ms;
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	height: 70px;
+	font-size: 1.1rem;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	overflow-y: hidden;
+	padding: 0.75em 0.75em;
+	margin-bottom: 11px;
+	cursor: text;
+	box-sizing: border-box;
+}
+/*! End main Style*/
+
+
+
+/*! Start back button Style [retroceder]*/
+span.back {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 75px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+	cursor: default;
+}
+
+.back span {
+	position: relative;
+	top: 1px;
+	font-size: 0.72rem;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.back path {
+	fill: rgba(0, 0, 0, 0.5);
+}
+
+.back:hover span {
+	color: black;
+}
+
+.back:hover path {
+	fill: black;
+}
+/*! End back button Style [retroceder]*/
+
+/*! Start Black button Style [Prox]*/
+button.proximo {
+	background-color: black;
+	width: 100px;
+}
+
+article button.disable {
+	opacity: 0;
+	transform: translateY(30px);
+}
+/*! End Black button Style [Prox]*/
+
+/*! Start Opt button Style*/
+.options button {
+	background-color: white;
+	color: black;
+}
+
+.options button.selected {
+	background-color: black;
+	color: white;
+}
+/*! End Opt button Style*/
+
+/*! Start Green button Style [Submeter]*/
+.submit {
+	display: block;
+	width: 120px;
+	background-color: rgb(0, 128, 0);
+	border-color: rgb(0, 115, 0);
+}
+/*! End Green button Style [Submeter]*/
+
+/*! Start Footer Style */
+footer {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	background-color: rgb(248, 249, 250);
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+	width: 1092px;
+	height: 100%;
+	margin: 8px;
+}
+
+.footer .left {
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 50%;
+	margin: 8px;
+	margin-right: 10%;
+}
+
+.progressiveBar {
+	border: 1px solid transparent;
+	width: 100%;
+	height: 6.5px;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.progressiveBar .bar {
+	width: 0%;
+	height: 6.5px;
+	border-radius: 5px;
+	background-color: black;
+	transition: 400ms;
+}
+.footer .right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 90%;
+	opacity: 1;
+}
+
+.right button {
+	padding: 0.75rem;
+	width: 100%;
+	margin-right: 8px;
+	border-radius: 0.5rem;
+	background-color: white;
+	transition: 500ms;
+}
+.right button:hover {
+	background-color: black;
+	transition: 500ms;
+}
+
+.right button:hover path {
+	fill: white;
+	transition: 500ms;
+}
+
+.right path {
+	fill: black;
+}
+
+.right button.disable {
+	opacity: 0.2;
+}
+.right button.disable:hover {
+	background-color: white;
+	box-shadow: 0 0;
+}
+.right button.disable:hover path {
+	fill: black;
+}
+
+/*! End Footer Style*/
