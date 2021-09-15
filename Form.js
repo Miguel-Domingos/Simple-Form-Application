@@ -74,7 +74,6 @@ window.onscroll = () => {
 	function setMarginBottom() {
 		margin = window.screen.width <= 768 ? 200 : 260
 		newMarginBottom = window.screen.height >= margin ? window.screen.height - margin : 0;
-		console.log(newMarginBottom, window.screen.height)
 		return newMarginBottom
 	}
 	display.style.setProperty('margin-bottom', `${setMarginBottom()}px`)
@@ -118,9 +117,6 @@ articleEnable = () => {
 window.onload = () => {
 	alert("Importante: \n Este Form está em construção \n Algumas das funcionalidades encontram-se indisponíveis")
 	display = document.querySelector('section')
-	if (window.screen.height == 1050) {
-		console.log('sobe', display)
-	}
 	// Retorna um array com as posições iniciais dos articles
 	window.scrollTo({ top: 0, behavior: "smooth" });
 	for (let x = 0; x < articles.length; x++) {
